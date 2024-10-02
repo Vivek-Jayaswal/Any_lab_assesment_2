@@ -1,0 +1,104 @@
+@import "../../App.scss";
+
+.design-createros {
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+
+    padding: 50px;
+    @include flexItem(space-evenly, center, null, null);
+
+    .left-part {
+        width: 400px;
+        height: 300px;
+        background-color: #f6efec;
+        @include flexItem(space-between, null, null, column);
+        padding: 10px;
+        box-sizing: border-box;
+        border-radius: 10px;
+
+        .left-heading {
+            height: 60%;
+            @include flexItem(space-evenly, flex-start, null, column);
+
+            span {
+                font-size: 20px;
+                font-weight: 800;
+            }
+
+            .head-bold {
+                font-size: 30px;
+                font-weight: 800;
+            }
+        }
+    }
+
+    .right-part {
+        width: 400px;
+        @include flexItem(space-evenly, flex-start, 20px, column);
+
+        .right-heading {
+            div {
+                @include flexItem(null, flex-start, 20px, null);
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .avtar-container {
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width : 480px) {
+    .design-createros {
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 20px;
+        @include flexItem(space-evenly, center, 20px, column);
+
+        .left-part {
+            width: 100%;
+        }
+
+        .right-part {
+            width: 100%;
+            border: 1px solid greenyellow;
+            padding: 10px;
+            @include flexItem(space-evenly, flex-start, 20px, column);
+        }
+    }
+}
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+    .design-createros {
+        width: 85%;
+        margin: auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 20px;
+        @include flexItem(space-evenly, center, 20px, column);
+
+        .left-part {
+            width: 100%;
+        }
+
+        .right-part {
+            width: 100%;
+            border: 1px solid greenyellow;
+            padding: 10px;
+            @include flexItem(space-evenly, flex-start, 20px, column);
+        }
+    }
+}

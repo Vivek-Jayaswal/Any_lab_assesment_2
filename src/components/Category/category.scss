@@ -1,0 +1,177 @@
+@import "../../App.scss";
+
+
+.categories-container{
+    margin-top: 30px;
+    width: 100%;
+    background-color: #f6efec;
+    padding : 30px 0px;
+    box-sizing: border-box;
+    h1{
+        width: 85%;
+        margin: auto;
+    }
+}
+
+.card-container{
+    width: 85%;
+    margin: auto;
+    @include flexItem(space-between, flex-start, null,null);
+    flex-wrap: wrap
+}
+
+.category-card{
+    @include flexItem(space-between, flex-start, null,null);
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+
+    img{
+        width: 150px;
+        height: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .category-left{
+        height: 100%;
+        padding: 10px;
+        @include flexItem(space-evenly, flex-start, null,column);
+        :nth-child(1){
+            color: white;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        :nth-child(2){
+            color: white;
+            font-weight: 400;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+    }
+}
+
+// .for Category card container
+.cateogry-bottom1{
+    width: 100%;
+    box-sizing: border-box;
+    @include flexItem(space-between, flex-start, 20px,column);
+    margin-top: 30px;
+    padding: 20px;
+
+    .category-bottom1-top{
+        width: 85%;
+        margin: auto;
+        @include flexItem(space-between, flex-start, 10px,column);
+
+        h1{
+            color: #6f41d1;
+            font-weight: 700;
+        }
+
+
+        .bottom1-top-child-2{
+            width: 100%;
+            @include flexItem(space-between, flex-start, null,null);
+
+            button{
+                padding: 5px 30px;
+                border-radius: 20px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    .category-bottom-card-container{
+        width: 85%;
+        margin: auto;
+        @include flexItem(space-between, flex-start, null,null);
+        flex-wrap: wrap;
+    }
+}
+
+
+@media only screen and (max-width : 480px){
+    .card-container{
+        width: 95%;
+        padding-top: 20px;
+        margin: auto;
+        @include flexItem(center, center,20px,null);
+        flex-wrap: wrap
+    }
+    
+    .cateogry-bottom1{ 
+        box-sizing: border-box;
+        .category-bottom1-top{
+            width: 95%;
+            box-sizing: border-box;
+            h1{
+                font-size: 18px;
+            }
+            .bottom1-top-child-2{
+                width: 100%;
+                @include flexItem(space-between, flex-start, null,null);
+                p{
+                    font-size: 13px;
+                    color: gray;
+                }
+    
+                button{
+                    font-size: 13px;
+                }
+            }
+        }
+    
+    
+        .category-bottom-card-container{
+            width: 95%;
+            box-sizing: border-box;
+            @include flexItem(center, center, 15px,null);
+        }
+    }
+}
+@media only screen and (min-width : 480px) and (max-width : 768px){
+    .card-container{
+        width: 100%;
+        padding-top: 20px;
+        margin: auto;
+        @include flexItem(center, center,20px,null);
+        flex-wrap: wrap
+    }
+    
+    .cateogry-bottom1{ 
+        width: 100%;
+        box-sizing: border-box;
+        .category-bottom1-top{
+            width: 95%;
+            box-sizing: border-box;
+            h1{
+                font-size: 18px;
+            }
+            .bottom1-top-child-2{
+                width: 100%;
+                @include flexItem(space-between, flex-start, null,null);
+                p{
+                    font-size: 13px;
+                    color: gray;
+                }
+    
+                button{
+                    font-size: 13px;
+                }
+            }
+        }
+    
+    
+        .category-bottom-card-container{
+            width: 100%;
+            box-sizing: border-box;
+            @include flexItem(space-evenly, center, 20px,null);
+        }
+    }
+}

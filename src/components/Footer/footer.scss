@@ -1,0 +1,224 @@
+@import "../../App.scss";
+
+.footer {
+    width: 100%;
+    box-sizing: border-box;
+    height: fit-content;
+    background-color:#f6efec;
+    @include flexItem(space-between, flex-start, 20px, column);
+    padding: 20px 0px;
+
+    .footer-top,
+    .footer-bottom {
+        width: 85%;
+        margin: auto
+    }
+
+    .footer-top {
+        @include flexItem(space-between, flex-start, 20px, null);
+        .heading{
+            font-size: 20px;
+            font-weight: 800;
+        }
+        .f-top-left {
+            width: 33%;
+            @include flexItem(space-between,flex-start, 20px, column);
+            .social-links {
+                @include flexItem(space-between,center, 20px, null);
+                img {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+
+                .logo {
+                    width: 40px;
+                    cursor: pointer;
+                    background-color: rgb(47, 47, 47);
+                    height: 40px;
+                    color: white;
+                    font-weight: 800;
+                    @include flexItem(center, center, null, null);
+                    border-radius: 50%
+                }
+
+
+            }
+        }
+        .f-top-middle{
+            width: 33%;
+            @include flexItem(space-between,null,20px,column);
+            div{
+                @include flexItem(space-between,null,20px,column);
+                p{
+                    width: 50%;
+                    cursor: pointer;
+                    padding: 10px;
+
+                    &:hover{
+                        background-color: gray;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }
+        .f-top-right{
+            width: 33%;
+            @include flexItem(space-between,null,20px,column);
+            div{
+                @include flexItem(space-between,null,20px,column);
+                p{
+                    width: 50%;
+                    cursor: pointer;
+                    padding: 10px;
+
+                    &:hover{
+                        background-color: gray;
+                        border-radius: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .footer-middle {
+        width: 100%;
+        background-color: #302c2c; 
+
+        div{
+            width: 85%;
+            margin: auto;
+            padding: 20px;
+            @include flexItem(space-between, center, null, null);
+        }
+    }
+
+}
+
+
+@media only screen and (max-width : 480px) {
+    .footer {
+        .footer-top,
+        .footer-bottom {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    
+        .footer-top {
+            width: 95%;
+            @include flexItem(center,center, 20px, column);
+            .heading{
+                width: 100%;
+                text-align: center;
+            }
+            .f-top-left {
+                width: 100%;
+                @include flexItem(center,center, 20px, column);
+                .left-text{
+                   text-align: center;
+                }
+            }
+            .f-top-middle{
+                width: 100%;
+                @include flexItem(center,center,20px,column);
+                div{
+                    width: 100%;
+                    box-sizing: border-box;
+                    @include flexItem(center,center,0px,column);
+                    p{
+                        width: 100%;
+                        box-sizing: border-box;
+                        text-align: center;
+                    }
+                }
+            }
+            .f-top-right{
+                width: 100%;
+                @include flexItem(center,center,20px,column);
+                div{
+                    width: 100%;
+                    @include flexItem(center,center,0px,column);
+                    p{
+                        width: 100%;
+                        box-sizing: border-box;
+                        text-align: center;
+                    }
+                }    
+            }
+        }
+    
+        .footer-middle {
+            width: 100%;
+            box-sizing: border-box;    
+            div{
+                width: 85%;
+                font-size: 12px;
+            }
+        }
+    
+    }
+}
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+    .footer {
+        .footer-top,
+        .footer-bottom {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    
+        .footer-top {
+            width: 95%;
+            @include flexItem(center,center, 20px, column);
+            .heading{
+                width: 100%;
+                text-align: center;
+            }
+            .f-top-left {
+                width: 100%;
+                @include flexItem(center,center, 20px, column);
+                .left-text{
+                   text-align: center;
+                }
+            }
+            .f-top-middle{
+                width: 100%;
+                @include flexItem(center,center,20px,column);
+                div{
+                    width: 100%;
+                    box-sizing: border-box;
+                    @include flexItem(center,center,0px,column);
+                    p{
+                        width: 100%;
+                        box-sizing: border-box;
+                        text-align: center;
+                    }
+                }
+            }
+            .f-top-right{
+                width: 100%;
+                @include flexItem(center,center,20px,column);
+                div{
+                    width: 100%;
+                    @include flexItem(center,center,0px,column);
+                    p{
+                        width: 100%;
+                        box-sizing: border-box;
+                        text-align: center;
+                    }
+                }    
+            }
+        }
+    
+        .footer-middle {
+            width: 100%;
+            box-sizing: border-box;    
+            div{
+                width: 85%;
+                font-size: 12px;
+            }
+        }
+    
+    }
+}

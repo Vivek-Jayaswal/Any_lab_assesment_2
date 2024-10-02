@@ -1,0 +1,118 @@
+@import "../../App.scss";
+
+
+.hero-bottom-1 {
+    background-color: #fafafa;
+    padding: 20px;
+    @include flexItem(space-between, flex-start, 20px, column);
+    width: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+
+    .hero-bottom1-top {
+        width: 85%;
+        margin: auto;
+
+        h1 {
+            color: #6f41d1;
+            font-weight: 700;
+        }
+
+        .hero-bottom1-top-child-2 {
+            @include flexItem(space-between, flex-start, null, null);
+
+            p {
+                color: gray;
+            }
+
+            button {
+                padding: 5px 30px;
+                border-radius: 20px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+
+    .card-container {
+        width: 85%;
+        margin: auto;
+        @include flexItem(space-between, flex-start, null, null);
+    }
+
+}
+
+
+@media only screen and (max-width : 480px) {
+
+    .hero-bottom-1 {
+        .hero-bottom1-top {
+            width: 95%;
+            // margin: auto;
+
+            h1 {
+                // color: #6f41d1;
+                // font-weight: 700;
+                font-size: 20px;
+            }
+
+            .hero-bottom1-top-child-2 {
+                @include flexItem(space-between, flex-start, null, null);
+
+                p {
+                    font-size: 15px;
+                    // color: gray;
+                }
+
+                button {
+                    font-size: 13px;
+                }
+            }
+
+        }
+
+
+        .card-container {
+            width: 95%;
+            margin: auto;
+            @include flexItem(center, center, 30px, column);
+        }
+
+    }
+
+}
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+
+    .hero-bottom-1 {
+        .hero-bottom1-top {
+            width: 95%;
+
+            h1 {
+                font-size: 20px;
+            }
+
+            .hero-bottom1-top-child-2 {
+                @include flexItem(space-between, flex-start, null, null);
+
+                p {
+                    font-size: 15px;
+                }
+
+                button {
+                  
+                    font-size: 13px;                }
+            }
+
+        }
+
+        .card-container {
+            width: 100%;
+            @include flexItem(space-evenly, center, 20px,null);
+            flex-wrap: wrap;
+        }
+
+    }
+
+}

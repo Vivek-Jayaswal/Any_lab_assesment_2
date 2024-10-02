@@ -1,0 +1,29 @@
+@import 'material-icons/iconfont/material-icons.css';
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+@mixin flexItem ($justify-content,$align-item,$gap,$flex-direction){
+    display: flex;
+    justify-content: $justify-content;
+    gap: $gap;
+    align-items: $align-item;
+    flex-direction: $flex-direction;
+}
+
+
+.app{
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+
+::-webkit-scrollbar{
+    display: none;
+}

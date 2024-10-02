@@ -1,0 +1,74 @@
+@import "../../App.scss";
+
+.social-media{
+    width: 100%;
+    height: fit-content;
+    background-color: #fafafa;
+    padding: 40px;
+    box-sizing: border-box;
+    @include flexItem(space-between, center, 40px, column);
+
+    .social-heading{
+        text-align: center;
+        h1{
+            color: #5426b6
+        }
+        p{
+            color: gray
+        }
+    }
+
+    .logo-container{
+        @include flexItem(center, center, 20px, column);
+
+        div{
+            @include flexItem(center, center, 20px, null);
+            img{
+                width: 150px;
+                height: 100px;
+                border-radius: 10px;
+                object-fit: contain;
+            }
+        }
+        
+    }
+
+}
+
+
+@media only screen and (max-width : 480px){
+    .social-media{ 
+        padding: 10px;  
+        .logo-container{   
+            div{
+                @include flexItem(center, center, 10px, null);
+                img{
+                    width: 60px;
+                    height: 100px;
+                }
+            }
+            
+        }
+    
+    }
+    
+}
+
+
+@media only screen and (min-width : 480px) and (max-width : 768px){
+    .social-media{ 
+        padding: 10px;  
+        .logo-container{   
+            div{
+                @include flexItem(center, center, 10px, null);
+                img{
+                    width: 60px;
+                    height: 100px;
+                }
+            }
+            
+        }
+    
+    }
+    
+}

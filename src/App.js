@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar"
+import "./App.scss"
+import HeroSection from "./components/heri-section/Hero_Section";
+import HeroBottom1 from "./components/hero-bottom1/HeroBottom1";
+import Categories from "./components/Category/Categories";
+import CategoriesBottom1 from "./components/Category/CategoryBottom1";
+import DesignerAndCreater from "./components/Design/Design";
+import Footer from "./components/Footer/Footer";
+import SocialMedia from "./components/SocialMedia/SocialMedia";
+import AppWorkProcess from "./components/AppWork/AppWorkProcess";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Navbar />
+      <HeroSection/>
+      <HeroBottom1 heading={"The OG Creators"}/>
+      <Categories />
+      <CategoriesBottom1 heading={"In The Spotlight"}/>
+      <DesignerAndCreater/>
+      <HeroBottom1 heading={"On The Rise"}/>
+      <CategoriesBottom1 heading={"UGC"}/>
+      <SocialMedia/>
+      <AppWorkProcess/>
+      <Footer/>
     </div>
-  );
+  )
 }
 
 export default App;

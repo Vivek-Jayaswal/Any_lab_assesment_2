@@ -1,0 +1,112 @@
+@import "../../App.scss";
+
+
+.work-process{
+    width: 100%;
+    padding: 50px;
+    height: fit-content;
+    box-sizing: border-box;
+
+    @include flexItem(center, center, 40px, column);
+
+    .work-heading{
+        color: #794ace
+    }
+
+    .work-detils{
+        @include flexItem(null, center, 40px, null);
+
+        .border{
+            border-bottom: 2px dashed rgb(16, 177, 231); /* Thickness, style, and color */
+            padding: 20px;
+            width: 150px;
+        }
+
+        .work-info{
+            @include flexItem(null, center, 10px, column);
+            button{
+                border: none;
+                padding: 15px;
+                border-radius: 10px;
+                cursor: pointer;
+                color: white;
+            }
+
+            .work-info-heading{
+                font-weight: 800;
+            }
+
+            .search{
+                background-color: #9672ff;
+            }
+            .reviews{
+                background-color: #4ddffd;
+            }
+            .pyment{
+                background-color: #f2b8ec;
+            }
+
+            div{
+                text-align: center;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width : 480px) {
+    .work-process{
+        width: 100%;
+        padding: 20px;
+        height: fit-content;
+        box-sizing: border-box;
+    
+        @include flexItem(center, center, 20px, column);
+    
+        .work-heading{
+            color: #794ace
+        }
+    
+        .work-detils{
+            @include flexItem(null, center, 20px, column);
+            .border{
+                border-right: 2px dashed rgb(16, 177, 231); /* Thickness, style, and color */
+                padding: 0px;
+                width: 0px;
+                height: 100px;
+            }
+    
+            .work-info{
+                @include flexItem(null, center, 10px, column);
+            }
+        }
+    }
+}
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+    .work-process{
+        width: 100%;
+        padding: 20px;
+        height: fit-content;
+        box-sizing: border-box;
+    
+        @include flexItem(center, center, 20px, column);
+    
+        .work-heading{
+            color: #794ace
+        }
+    
+        .work-detils{
+            @include flexItem(null, center, 20px, column);
+            .border{
+                border-right: 2px dashed rgb(16, 177, 231); /* Thickness, style, and color */
+                padding: 0px;
+                width: 0px;
+                height: 100px;
+            }
+    
+            .work-info{
+                @include flexItem(null, center, 10px, column);
+            }
+        }
+    }
+}
